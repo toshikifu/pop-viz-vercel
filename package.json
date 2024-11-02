@@ -2,7 +2,6 @@
     "repository": "https://github.com/vercel/examples.git",
     "license": "MIT",
     "private": true,
-    "type": "module",
     "dependencies": {
         "@types/node": "^22.8.6",
         "@vercel/node": "^3.2.24",
