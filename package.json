@@ -5,9 +5,7 @@
     "dependencies": {
         "@types/node": "^22.8.6",
         "@vercel/node": "^3.2.24",
+        "node-fetch": "^2.7.0",
         "typescript": "^5.6.3"
-    },
-    "devDependencies": {
-        "node-fetch": "^3.3.2"
     }
 }
