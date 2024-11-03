@@ -1,21 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import fetch from 'node-fetch'
-
-type ApiResponse = {
-  statusCode?: string
-  message: string | null
-  description?: string
-  result?: Prefectures[]
-}
-
-type Prefectures = {
-  prefCode: number
-  prefName: string
-}
-
-const API_URL = 'https://opendata.resas-portal.go.jp/api/v1'
-const API_KEY = process.env.RESAS_API_KEY ?? ''
-const ALLOWED_ORIGIN = process.env.FRONTEND_URL ?? ''
+import { ALLOWED_ORIGIN, API_KEY, API_URL } from '../config'
+import { ApiResponse } from '../type'
 
 async function fetchPrefectures(): Promise<ApiResponse> {
   const response = await fetch(`${API_URL}/prefectures`, {
