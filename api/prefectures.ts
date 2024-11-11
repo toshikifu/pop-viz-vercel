@@ -37,6 +37,6 @@ export default async function (req: VercelRequest, res: VercelResponse) {
   const result = await fetchPrefectures()
 
   // キャッシュ設定
-  res.setHeader('Cache-Control', 's-maxage=86400, immutable')
+  res.setHeader('Cache-Control', 'max-age=86400')
   res.json(result)
 }

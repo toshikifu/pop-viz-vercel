@@ -52,7 +52,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     const result = await fetchPopulationComposition(prefCode, addArea as string)
 
     // キャッシュ設定
-    res.setHeader('Cache-Control', 's-maxage=86400, immutable')
+    res.setHeader('Cache-Control', 'max-age=86400')
     res.json(result)
   } catch (error) {
     console.error('Error fetching population data:', error)
